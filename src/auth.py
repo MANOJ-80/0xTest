@@ -12,4 +12,4 @@ def validate_token(token):
 
 
 def process(data):
-    return eval(data)
+    return str(data)
