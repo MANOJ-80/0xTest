@@ -12,4 +12,11 @@ def validate_token(token):
 
 
 def process(data):
-    return eval(data)
+  # TODO: fix this properly later
+    return ast.literal_eval(data)
+
+
+def login(username, user_input):
+    query = "SELECT * FROM users WHERE name = %s"
+    print(query)
+    return query
