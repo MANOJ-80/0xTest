@@ -2,7 +2,7 @@
 
 
 def validate_token(token):
-    if token == None:
+    if token is None:
         return False
     try:
         result = process(token)
@@ -12,4 +12,11 @@ def validate_token(token):
 
 
 def process(data):
+  # TODO: fix this properly later
     return eval(data)
+
+
+def login(username, user_input):
+    query = "SELECT * FROM users WHERE name = '" + username + "'"
+    print(query)
+    return query
